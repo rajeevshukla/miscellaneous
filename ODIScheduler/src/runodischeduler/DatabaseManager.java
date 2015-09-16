@@ -12,20 +12,20 @@ public class DatabaseManager {
 
 
 	/**
-	 * This method will return data  i.e. scenName|scenVer from database  null if not found
+	 * This method will return data  i.e. job_id|scenName|scenVer|duetime from database  null if not found
 	 * 
 	 */
 
 	public  String fetchJobDetailsFromDB() throws Exception{
 
-		System.out.println("INFO: Fetching database connection");
+	 //	System.out.println("INFO: Fetching database connection");
 		Connection connection =DatabaseUtils.getInstance().getConnection();
-		System.out.println("Connection : "+connection);
+	//	System.out.println("Connection : "+connection);
 
 		String result=null;
 
 		if(null!=connection){
-			CallableStatement callableStatement=connection.prepareCall("call PKG_COMMON.SP_GET_SCENARIO_DETAILS(?,?)");
+			CallableStatement callableStatement=connection.prepareCall("call STG_MDM.PKG_COMMON.SP_GET_SCENARIO_DETAILS(?,?)");
 			callableStatement.setString(1, "001");
 			callableStatement.registerOutParameter(2,OracleTypes.VARCHAR);
 			callableStatement.execute();
@@ -40,14 +40,14 @@ public class DatabaseManager {
 
 	public void updateJobDetailsInDB(int jobId,long sessionId,String sessionStatus){
 
-		System.out.println("INFO: Fetching database connection");
+	//	System.out.println("INFO: Fetching database connection");
 		Connection connection =DatabaseUtils.getInstance().getConnection();
 		if(null!=connection){
 			try {
 				CallableStatement callableStatement=connection.prepareCall("call STG_MDM.PKG_COMMON.SP_UPDATE_JOB_STATUS(?,?,?)");
 				callableStatement.setInt(1, jobId);;
-				callableStatement.setLong(2, sessionId);
-				callableStatement.setString(3, sessionStatus);
+				callableStatement.setInt(3, new Long(sessionId).intValue());
+				callableStatement.setString(2, sessionStatus);
 				callableStatement.execute();
 				connection.close();
 			} catch (SQLException e) {

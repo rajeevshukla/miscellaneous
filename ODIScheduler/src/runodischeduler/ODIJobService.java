@@ -58,7 +58,7 @@ public class ODIJobService {
 			timeToSleep = Long.parseLong(data[3]);
 			System.out.println("INFO: Going to sleep for "+ timeToSleep+ " Minutes");
 			try {
-				Thread.sleep(timeToSleep*60*1000);
+				Thread.sleep(timeToSleep*1000);
 			} catch (Exception e1) {
 				e1.printStackTrace();
 			}
@@ -67,9 +67,9 @@ public class ODIJobService {
 			//UPDATING JOB STATUS IN DB
 			databaseManager.updateJobDetailsInDB(jobId, 0, "RUNNING");			
 
-			System.out.println("INFO: Executing job right away !!");
+			//System.out.println("INFO: Executing job right away !!");
 			
-			System.out.println("Job INFO ::  ODIScenName:"+odiSessionName+" OdiHost:"+odiHost+" OdiScenVersion:"+odiScenName);
+			System.out.println("Job INFO ::  ODIScenName:"+odiScenName+" OdiHost:"+odiHost+" OdiScenVersion:"+odiScenVersion);
 
 			try {
 				call.runScenario(odiHost,odiUser,odiPassword,odiScenName,odiScenVersion,

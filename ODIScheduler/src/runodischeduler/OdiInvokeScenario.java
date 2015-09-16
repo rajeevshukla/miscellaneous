@@ -53,14 +53,14 @@ public class OdiInvokeScenario {
 			if(exeInfo.getSessionStatus().name().equalsIgnoreCase("ERROR")){
 				int failedCount=getFailureCounterValue(jobId);
 				if(failedCount >= maxRetries){
-					System.out.println("FATAL :========= JOB FAILED PERMANENTLY ======");
+					System.out.println("FATAL :========= JOB "+ odiScenName +" FAILED PERMANENTLY ======");
 					dbManager.updateJobDetailsInDB(jobId, exeInfo.getSessionId(), "FAILED");
 				}else {
-					System.out.println("INFO:===== JOB FAILED TEMPORARILY ===== RETIRES :"+failedCount+1);
+					System.out.println("INFO:===== JOB "+odiScenName +" FAILED TEMPORARILY ===== RETIRES :"+(failedCount+1));
 					updateFailureCounter(jobId);
 				}
 			}else {
-				System.out.println(" INFO :====== JOB FINISHED =========== ");
+				System.out.println(" INFO :====== JOB "+odiScenName +" FINISHED =========== ");
 				dbManager.updateJobDetailsInDB(jobId, exeInfo.getSessionId(), exeInfo.getSessionStatus().name());
 				removeFailureCounter(jobId);
 			}
