@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry including="**/*.java" kind="src" output="target/classes" path="src">
+		<attributes>
+			<attribute name="optional" value="true"/>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/rajeev.shukla/Downloads/Odi Jars/Odi Jars/bsf.jar"/>
+	<classpathentry kind="lib" path="C:/Users/rajeev.shukla/Downloads/Odi Jars/Odi Jars/bsh-2.0b2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/rajeev.shukla/Downloads/Odi Jars/Odi Jars/commons-collections-3.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/rajeev.shukla/Downloads/Odi Jars/Odi Jars/eclipselink.jar"/>
+	<classpathentry kind="lib" path="C:/Users/rajeev.shukla/Downloads/Odi Jars/Odi Jars/odi-core.jar"/>
+	<classpathentry kind="lib" path="C:/Users/rajeev.shukla/Downloads/Odi Jars/Odi Jars/ojdl.jar"/>
+	<classpathentry kind="lib" path="C:/Users/rajeev.shukla/Downloads/Odi Jars/Odi Jars/oracle.ucp_11.1.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/rajeev.shukla/Downloads/Odi Jars/Odi Jars/persistence.jar"/>
+	<classpathentry kind="lib" path="C:/Users/rajeev.shukla/Downloads/Odi Jars/Odi Jars/spring-beans.jar"/>
+	<classpathentry kind="lib" path="C:/Users/rajeev.shukla/Downloads/Odi Jars/Odi Jars/spring-core.jar"/>
+	<classpathentry kind="lib" path="C:/Users/rajeev.shukla/Downloads/Odi Jars/Odi Jars/spring-dao.jar"/>
+	<classpathentry kind="lib" path="C:/Users/rajeev.shukla/Downloads/Odi Jars/Odi Jars/spring-jdbc.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jdk1.6.0_45"/>
+	<classpathentry kind="lib" path="D:/jars/ojdbc6.jar"/>
+	<classpathentry kind="output" path="target/classes"/>
+</classpath>
