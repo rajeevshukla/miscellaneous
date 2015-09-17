@@ -45,7 +45,7 @@ public class DatabaseManager {
 		Connection connection =DatabaseUtils.getInstance().getConnection();
 		if(null!=connection){
 			try {
-				CallableStatement callableStatement=connection.prepareCall("call STG_MDM.PKG_COMMON.SP_UPDATE_JOB_STATUS(?,?,?,?)");
+				CallableStatement callableStatement=connection.prepareCall("call STG_MDM.PKG_COMMON.SP_UPDATE_JOB_STATUS(?,?,?,?,?)");
 				callableStatement.setInt(1, jobId);;
 				callableStatement.setString(2, sessionStatus);
 				callableStatement.setInt(3, new Long(sessionId).intValue());
