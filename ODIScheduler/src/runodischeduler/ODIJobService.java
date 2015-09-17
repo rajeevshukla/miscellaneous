@@ -1,5 +1,8 @@
 package runodischeduler;
 
+import java.sql.Timestamp;
+
+import oracle.odi.runtime.agent.invocation.ExecutionInfo;
 import oracle.odi.runtime.agent.invocation.InvocationException;
 import oracle.odi.runtime.agent.invocation.StartupParams;
 
@@ -14,7 +17,7 @@ public class ODIJobService {
 	private String odiContextCode;
 	private String odiWorkRepName;
 	private String odiScenVersion;
-	
+	private int maxRetries;
 	public ODIJobService() {
 		odiHost = ApplicationUtils.getCustomProperty("odiHost");
 		odiUser = ApplicationUtils.getCustomProperty("odiUser"); //INSERT ODI USER
@@ -24,6 +27,8 @@ public class ODIJobService {
 		//INSERT THE CONTEXT FOR SCENARIO ODI "GLOBAL" SUCH AS DEFAULT
 		odiContextCode = ApplicationUtils.getCustomProperty("odiContextCode"); 
 		odiWorkRepName = ApplicationUtils.getCustomProperty("odiWorkRepName"); //INSERT NAME OF YOUR WORK REPOSITORY
+		this.maxRetries = Integer.parseInt(ApplicationUtils.getCustomProperty("noOfRetry"));
+
 	}
 
 	public  void runJob() throws Throwable{
@@ -65,26 +70,46 @@ public class ODIJobService {
 
 			OdiInvokeScenario call = new OdiInvokeScenario(databaseManager,jobId);
 			//UPDATING JOB STATUS IN DB
-			databaseManager.updateJobDetailsInDB(jobId, 0, "RUNNING");			
-
+			databaseManager.updateJobDetailsInDB(jobId, 0, "RUNNING",new Timestamp(System.currentTimeMillis()),"TRUE");			
 			//System.out.println("INFO: Executing job right away !!");
-			
 			System.out.println("Job INFO ::  ODIScenName:"+odiScenName+" OdiHost:"+odiHost+" OdiScenVersion:"+odiScenVersion);
+			ApplicationUtils.setJobFinished(false); //first time it should be false
 
-			try {
-				call.runScenario(odiHost,odiUser,odiPassword,odiScenName,odiScenVersion,
-						odiStartupParams,odiKeywords,odiContextCode,
-						odiLogLevel,odiSessionName,odiSynchronous,
-						odiWorkRepName);
-			} catch (InvocationException e) {
-				e.printStackTrace();
+			while(!ApplicationUtils.isJobFinished()) { 
+			
+				try {
+					ExecutionInfo exeInfo=call.runScenario(odiHost,odiUser,odiPassword,odiScenName,odiScenVersion,
+							odiStartupParams,odiKeywords,odiContextCode,
+							odiLogLevel,odiSessionName,odiSynchronous,
+							odiWorkRepName);
+
+					if(exeInfo.getSessionStatus().name().equalsIgnoreCase("ERROR")){
+						int failedCount=ApplicationUtils.getJobFailedCouter();
+						if(failedCount >= maxRetries){
+							System.out.println("FATAL :========= JOB "+ odiScenName +" FAILED PERMANENTLY ======");
+							ApplicationUtils.setJobFinished(true);
+							ApplicationUtils.resetJobFailedCounter();
+							databaseManager.updateJobDetailsInDB(jobId, exeInfo.getSessionId(), "FAILED",new Timestamp(System.currentTimeMillis()),"FALSE");
+						}else {
+							System.out.println("INFO:===== JOB "+odiScenName +" FAILED TEMPORARILY ===== RETIRES :"+(failedCount+1));
+							ApplicationUtils.updateJobFailedCounter();
+							ApplicationUtils.setJobFinished(false);
+						}
+					}else {
+						System.out.println(" INFO :====== JOB "+odiScenName +" FINISHED =========== ");
+						databaseManager.updateJobDetailsInDB(jobId, exeInfo.getSessionId(), exeInfo.getSessionStatus().name(),new Timestamp(System.currentTimeMillis()),"FALSE");
+						ApplicationUtils.resetJobFailedCounter();
+						ApplicationUtils.setJobFinished(true);
+					}
+
+				} catch (InvocationException e) {
+					e.printStackTrace();
+				}
 			}
 			System.out.println("INFO :  ==== CHECKING ANOTHER JOB DETAILS ====");
 			result=databaseManager.fetchJobDetailsFromDB();
 		}
-		System.out.println("INFO: No More job found. Exiting  !!!");
-
+		System.out.println("INFO: ======== No More job found. Exiting  !!! Will come back after scheduled time :) ===");
 	}
-
-
+	
 }

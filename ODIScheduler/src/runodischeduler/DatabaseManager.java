@@ -3,6 +3,7 @@ package runodischeduler;
 import java.sql.CallableStatement;
 import java.sql.Connection;
 import java.sql.SQLException;
+import java.sql.Timestamp;
 
 import oracle.jdbc.OracleTypes;
 
@@ -38,16 +39,18 @@ public class DatabaseManager {
 		return null;
 	}
 
-	public void updateJobDetailsInDB(int jobId,long sessionId,String sessionStatus){
+	public void updateJobDetailsInDB(int jobId,long sessionId,String sessionStatus,Timestamp time,String isStartTime){
 
 	//	System.out.println("INFO: Fetching database connection");
 		Connection connection =DatabaseUtils.getInstance().getConnection();
 		if(null!=connection){
 			try {
-				CallableStatement callableStatement=connection.prepareCall("call STG_MDM.PKG_COMMON.SP_UPDATE_JOB_STATUS(?,?,?)");
+				CallableStatement callableStatement=connection.prepareCall("call STG_MDM.PKG_COMMON.SP_UPDATE_JOB_STATUS(?,?,?,?)");
 				callableStatement.setInt(1, jobId);;
-				callableStatement.setInt(3, new Long(sessionId).intValue());
 				callableStatement.setString(2, sessionStatus);
+				callableStatement.setInt(3, new Long(sessionId).intValue());
+				callableStatement.setTimestamp(4, time);
+				callableStatement.setString(5, isStartTime);
 				callableStatement.execute();
 				connection.close();
 			} catch (SQLException e) {
