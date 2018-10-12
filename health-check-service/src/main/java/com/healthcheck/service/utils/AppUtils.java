@@ -1,5 +1,6 @@
 package com.healthcheck.service.utils;
 
+import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
@@ -14,7 +15,19 @@ import com.healthcheck.service.model.AppInstanceDetails;
 
 public class AppUtils {
 
-	public static List<AppInstanceDetails> loadStaticInstances() throws Exception {
+	public static List<AppInstanceDetails> loadStaticInstances() {
+		
+		List<AppInstanceDetails> persons = null;
+		try {
+			persons = loadData();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		return ImmutableList.copyOf(persons);
+
+	}
+
+	private static List<AppInstanceDetails> loadData() throws IOException {
 		// Resources from Guava library
 		InputStream inputStream = Resources.getResource("listofinstances.json").openStream();
 		String jsonData = IOUtils.toString(inputStream, "UTF-8");
@@ -24,8 +37,7 @@ public class AppUtils {
 		}.getType();
 
 		List<AppInstanceDetails> persons = new Gson().fromJson(jsonData, listType);
-		return ImmutableList.copyOf(persons);
-
+		return persons;
 	}
 
 }
