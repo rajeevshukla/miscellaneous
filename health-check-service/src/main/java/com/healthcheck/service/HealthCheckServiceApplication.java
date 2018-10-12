@@ -7,6 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 
 import com.healthcheck.service.proxy.GetRunningAppsEurekaServiceProxy;
+import com.healthcheck.service.utils.AppUtils;
 
 @SpringBootApplication
 @EnableFeignClients("com.healthcheck.service.proxy")
@@ -27,6 +28,7 @@ public class HealthCheckServiceApplication implements CommandLineRunner {
 		//similarily you can call this one change url in app.props and then change in proxy class 
 		//System.out.println(proxy.getRunningApps());
 		
+		System.out.println(AppUtils.loadStaticInstances());
 		
 	}
 }
