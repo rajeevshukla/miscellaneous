@@ -6,7 +6,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 
-import com.healthcheck.service.proxy.GetRunningAppsEurekaServiceProxy;
+import com.healthcheck.service.proxy.EurekaAppServiceProxy;
 import com.healthcheck.service.utils.AppUtils;
 
 @SpringBootApplication
@@ -14,7 +14,7 @@ import com.healthcheck.service.utils.AppUtils;
 public class HealthCheckServiceApplication implements CommandLineRunner {
 
 	@Autowired
-	GetRunningAppsEurekaServiceProxy proxy;
+	EurekaAppServiceProxy proxy;
 	
 	public static void main(String[] args) {
 		SpringApplication.run(HealthCheckServiceApplication.class, args);

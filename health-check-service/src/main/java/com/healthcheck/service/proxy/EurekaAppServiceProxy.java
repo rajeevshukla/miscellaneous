@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import com.healthcheck.service.model.Applications;
 
 @FeignClient(name="eureka-proxy",url="${eureka.uri}")
-public interface GetRunningAppsEurekaServiceProxy {
+public interface EurekaAppServiceProxy {
 
 	
 	
