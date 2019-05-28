@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.windstream.voipservice</groupId>
+	<artifactId>voip-service</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>jar</packaging>
+
+	<name>voip-service</name>
+	<description>VOIP SERVICE</description>
+
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.0.4.RELEASE</version>
+		<relativePath /> <!-- lookup parent from repository -->
+	</parent>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<java.version>1.8</java.version>
+		<forceRegenerate>false</forceRegenerate>
+		<maven.deploy.skip>${env.skip.deploy}</maven.deploy.skip>
+		<spring-cloud.version>Finchley.SR1</spring-cloud.version>
+		<spring.swagger.version>2.8.0</spring.swagger.version>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+			<scope>runtime</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-jdbc</artifactId>
+		</dependency>
+		
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-aop</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger-ui</artifactId>
+			<version>${spring.swagger.version}</version>
+			<scope>compile</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger2</artifactId>
+			<version>${spring.swagger.version}</version>
+			<scope>compile</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.ws</groupId>
+			<artifactId>spring-ws-core</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>com.oracle</groupId>
+			<artifactId>ojdbc6</artifactId>
+			<version>11.2.0.3</version>
+		</dependency>
+
+		<!-- Spring cloud dependencies -->
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-openfeign</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-netflix-hystrix-dashboard</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-configuration-processor</artifactId>
+			<optional>true</optional>
+		</dependency>
+
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<optional>true</optional>
+		</dependency>
+
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+
+			<!-- tag::wsdl[] -->
+			<plugin>
+				<groupId>org.jvnet.jaxb2.maven2</groupId>
+				<artifactId>maven-jaxb2-plugin</artifactId>
+				<version>0.14.0</version>
+				<executions>
+					<execution>
+						<id>ent-groups</id>
+						<phase>generate-sources</phase>
+						<goals>
+							<goal>generate</goal>
+						</goals>
+
+						<configuration>
+							<schemaLanguage>WSDL</schemaLanguage>
+							<generateDirectory>${project.build.directory}/generated-sources/xjc/ent-groups</generateDirectory>
+							<schemaDirectory>${project.basedir}/src/main/resources/wsdls</schemaDirectory>
+							<generatePackage>com.ssf.getenterprisegroups</generatePackage>
+							<readOnly>true</readOnly>
+							<removeOldOutput>false</removeOldOutput>
+							<forceRegenerate>${forceRegenerate}</forceRegenerate>
+							<schemaIncludes>
+								<include>GetGroupsByEnterprise.wsdl</include>
+							</schemaIncludes>
+							<bindingDirectory>${project.basedir}/src/main/resources/wsdls/bindings</bindingDirectory>
+							<bindingIncludes>
+								<bindingInclude>jaxb-bindings.xjb</bindingInclude>
+							</bindingIncludes>
+						</configuration>
+					</execution>
+
+					<execution>
+						<id>bw-auth-token</id>
+						<phase>generate-sources</phase>
+						<goals>
+							<goal>generate</goal>
+						</goals>
+
+						<configuration>
+							<schemaLanguage>WSDL</schemaLanguage>
+							<generateDirectory>${project.build.directory}/generated-sources/xjc/bw-auth-token</generateDirectory>
+							<schemaDirectory>${project.basedir}/src/main/resources/wsdls</schemaDirectory>
+							<generatePackage>bw.managed.authtoken</generatePackage>
+							<readOnly>true</readOnly>
+							<removeOldOutput>false</removeOldOutput>
+							<forceRegenerate>${forceRegenerate}</forceRegenerate>
+							<schemaIncludes>
+								<include>GetBwAuthTokenService.wsdl</include>
+							</schemaIncludes>
+							<bindingDirectory>${project.basedir}/src/main/resources/wsdls/bindings</bindingDirectory>
+							<bindingIncludes>
+								<bindingInclude>jaxb-bindings.xjb</bindingInclude>
+							</bindingIncludes>
+						</configuration>
+					</execution>
+					<execution>
+						<id>voip-admin-api</id>
+						<phase>generate-sources</phase>
+						<goals>
+							<goal>generate</goal>
+						</goals>
+
+						<configuration>
+							<schemaLanguage>WSDL</schemaLanguage>
+							<generateDirectory>${project.build.directory}/generated-sources/xjc/voip-admin-api</generateDirectory>
+							<schemaDirectory>${project.basedir}/src/main/resources/wsdls</schemaDirectory>
+							<generatePackage>bw.managed.voipadmin</generatePackage>
+							<readOnly>true</readOnly>
+							<removeOldOutput>false</removeOldOutput>
+							<forceRegenerate>${forceRegenerate}</forceRegenerate>
+							<schemaIncludes>
+								<include>VoipAdminApiService.wsdl</include>
+							</schemaIncludes>
+							<bindingDirectory>${project.basedir}/src/main/resources/wsdls/bindings</bindingDirectory>
+							<bindingIncludes>
+								<bindingInclude>jaxb-bindings.xjb</bindingInclude>
+							</bindingIncludes>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			<!-- end::wsdl[] -->
+
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>exec-maven-plugin</artifactId>
+				<version>1.6.0</version>
+				<executions>
+					<execution>
+						<id>change deploy script permission</id>
+						<phase>deploy</phase>
+						<goals>
+							<goal>exec</goal>
+						</goals>
+						<configuration>
+							<executable>chmod</executable>
+							<arguments>
+								<argument>744</argument>
+								<argument>${project.basedir}/scripts/deploy.sh</argument>
+							</arguments>
+						</configuration>
+					</execution>
+					<execution>
+						<id>deploy service</id>
+						<phase>deploy</phase>
+						<goals>
+							<goal>exec</goal>
+						</goals>
+						<configuration>
+							<executable>${project.basedir}/scripts/deploy.sh</executable>
+							<arguments>
+								<argument>${project.build.directory}/${project.build.finalName}.jar</argument>
+								<argument>${env.servers}</argument>
+								<argument>${env.deploy.service.script}</argument>
+								<argument>${project.basedir}/scripts/voip-service.sh</argument>
+							</arguments>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+		<finalName>${project.artifactId}</finalName>
+	</build>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.springframework.cloud</groupId>
+				<artifactId>spring-cloud-dependencies</artifactId>
+				<version>${spring-cloud.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+	<repositories>
+		<repository>
+			<id>paetec-releases</id>
+			<url>http://maven.corp.paetec.com/nexus/content/repositories/paetec-releases</url>
+		</repository>
+	</repositories>
+
+	<distributionManagement>
+		<repository>
+			<id>paetec-releases</id>
+			<url>http://maven.corp.paetec.com/nexus/content/repositories/paetec-releases</url>
+		</repository>
+		<snapshotRepository>
+			<id>paetec-snapshots</id>
+			<url>http://maven.corp.paetec.com/nexus/content/repositories/paetec-snapshots</url>
+		</snapshotRepository>
+	</distributionManagement>
+
+</project>

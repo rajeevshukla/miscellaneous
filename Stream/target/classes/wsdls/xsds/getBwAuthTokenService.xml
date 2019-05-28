@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is Metro/2.2.0-1 (tags/2.2.0u1-7139; 2012-06-02T10:55:19+0000) JAXWS-RI/2.2.6-2 JAXWS/2.2 svn-revision#unknown. --><xs:schema xmlns:tns="http://bw.managed/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://bw.managed/">
+
+<xs:element name="getTokenForUser" type="tns:getTokenForUser"/>
+
+<xs:element name="getTokenForUserResponse" type="tns:getTokenForUserResponse"/>
+
+<xs:complexType name="getTokenForUser">
+<xs:sequence>
+<xs:element name="userId" type="xs:string" minOccurs="0"/>
+<xs:element name="domain" type="xs:string" minOccurs="0"/>
+<xs:element name="unknownUserUrl" type="xs:string" minOccurs="0"/>
+<xs:element name="portalLoginUrl" type="xs:string" minOccurs="0"/>
+<xs:element name="cluster" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getTokenForUserResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>

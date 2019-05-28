@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bindings version="2.0" xmlns="http://java.sun.com/xml/ns/jaxb"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc">
+
+ <globalBindings>
+        <xjc:serializable uid="12343" />
+        <xjc:simple/>
+  </globalBindings>
+
+</bindings>
+

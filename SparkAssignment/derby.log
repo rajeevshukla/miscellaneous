@@ -1,0 +1,13 @@
+----------------------------------------------------------------
+Mon May 27 02:25:29 EDT 2019:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.12.1.1 - (1704137): instance a816c00e-016a-f7f7-21ed-000012942f28 
+on database directory /home/rajeev/Documents/spring-microservices/SparkAssignment/metastore_db with class loader org.apache.spark.sql.hive.client.IsolatedClientLoader$$anon$1@5707f613 
+Loaded from file:/home/rajeev/.m2/repository/org/apache/derby/derby/10.12.1.1/derby-10.12.1.1.jar
+java.vendor=Oracle Corporation
+java.runtime.version=1.8.0_181-b13
+user.dir=/home/rajeev/Documents/spring-microservices/SparkAssignment
+os.name=Linux
+os.arch=amd64
+os.version=4.15.0-48-generic
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''

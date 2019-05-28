@@ -1,0 +1,1570 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is Metro/2.2.0-1 (tags/2.2.0u1-7139; 2012-06-02T10:55:19+0000) JAXWS-RI/2.2.6-2 JAXWS/2.2 svn-revision#unknown. --><xs:schema xmlns:tns="http://bw.managed/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://bw.managed/">
+
+<xs:element name="Exception" type="tns:Exception"/>
+
+<xs:element name="IOException" type="tns:IOException"/>
+
+<xs:element name="JDOMException" type="tns:JDOMException"/>
+
+<xs:element name="NorthboundException" type="tns:NorthboundException"/>
+
+<xs:element name="addDepartmentAdminBO" type="tns:addDepartmentAdminBO"/>
+
+<xs:element name="addDepartmentAdminBOResponse" type="tns:addDepartmentAdminBOResponse"/>
+
+<xs:element name="addEnterpriseAdmin" type="tns:addEnterpriseAdmin"/>
+
+<xs:element name="addEnterpriseAdminBO" type="tns:addEnterpriseAdminBO"/>
+
+<xs:element name="addEnterpriseAdminBOResponse" type="tns:addEnterpriseAdminBOResponse"/>
+
+<xs:element name="addEnterpriseAdminBOWithPass" type="tns:addEnterpriseAdminBOWithPass"/>
+
+<xs:element name="addEnterpriseAdminBOWithPassResponse" type="tns:addEnterpriseAdminBOWithPassResponse"/>
+
+<xs:element name="addEnterpriseAdminResponse" type="tns:addEnterpriseAdminResponse"/>
+
+<xs:element name="addEnterpriseAdminWithPassword" type="tns:addEnterpriseAdminWithPassword"/>
+
+<xs:element name="addEnterpriseAdminWithPasswordResponse" type="tns:addEnterpriseAdminWithPasswordResponse"/>
+
+<xs:element name="addEnterpriseDeptAdmin" type="tns:addEnterpriseDeptAdmin"/>
+
+<xs:element name="addEnterpriseDeptAdminResponse" type="tns:addEnterpriseDeptAdminResponse"/>
+
+<xs:element name="addEnterpriseGroup" type="tns:addEnterpriseGroup"/>
+
+<xs:element name="addEnterpriseGroupAdmin" type="tns:addEnterpriseGroupAdmin"/>
+
+<xs:element name="addEnterpriseGroupAdminBO" type="tns:addEnterpriseGroupAdminBO"/>
+
+<xs:element name="addEnterpriseGroupAdminBOResponse" type="tns:addEnterpriseGroupAdminBOResponse"/>
+
+<xs:element name="addEnterpriseGroupAdminBOWithPassword" type="tns:addEnterpriseGroupAdminBOWithPassword"/>
+
+<xs:element name="addEnterpriseGroupAdminBOWithPasswordResponse" type="tns:addEnterpriseGroupAdminBOWithPasswordResponse"/>
+
+<xs:element name="addEnterpriseGroupAdminResponse" type="tns:addEnterpriseGroupAdminResponse"/>
+
+<xs:element name="addEnterpriseGroupAdminWithPassword" type="tns:addEnterpriseGroupAdminWithPassword"/>
+
+<xs:element name="addEnterpriseGroupAdminWithPasswordResponse" type="tns:addEnterpriseGroupAdminWithPasswordResponse"/>
+
+<xs:element name="addEnterpriseGroupBO" type="tns:addEnterpriseGroupBO"/>
+
+<xs:element name="addEnterpriseGroupBOResponse" type="tns:addEnterpriseGroupBOResponse"/>
+
+<xs:element name="addEnterpriseGroupDeptAdmin" type="tns:addEnterpriseGroupDeptAdmin"/>
+
+<xs:element name="addEnterpriseGroupDeptAdminResponse" type="tns:addEnterpriseGroupDeptAdminResponse"/>
+
+<xs:element name="addEnterpriseGroupResponse" type="tns:addEnterpriseGroupResponse"/>
+
+<xs:element name="addExtensionUser" type="tns:addExtensionUser"/>
+
+<xs:element name="addExtensionUserBO" type="tns:addExtensionUserBO"/>
+
+<xs:element name="addExtensionUserBOResponse" type="tns:addExtensionUserBOResponse"/>
+
+<xs:element name="addExtensionUserResponse" type="tns:addExtensionUserResponse"/>
+
+<xs:element name="addGroup" type="tns:addGroup"/>
+
+<xs:element name="addGroupAdmin" type="tns:addGroupAdmin"/>
+
+<xs:element name="addGroupAdminBO" type="tns:addGroupAdminBO"/>
+
+<xs:element name="addGroupAdminBOResponse" type="tns:addGroupAdminBOResponse"/>
+
+<xs:element name="addGroupAdminResponse" type="tns:addGroupAdminResponse"/>
+
+<xs:element name="addGroupResponse" type="tns:addGroupResponse"/>
+
+<xs:element name="addUser" type="tns:addUser"/>
+
+<xs:element name="addUserBO" type="tns:addUserBO"/>
+
+<xs:element name="addUserBOResponse" type="tns:addUserBOResponse"/>
+
+<xs:element name="addUserResponse" type="tns:addUserResponse"/>
+
+<xs:element name="assignUserServices" type="tns:assignUserServices"/>
+
+<xs:element name="assignUserServicesResponse" type="tns:assignUserServicesResponse"/>
+
+<xs:element name="authenticateUser" type="tns:authenticateUser"/>
+
+<xs:element name="authenticateUserResponse" type="tns:authenticateUserResponse"/>
+
+<xs:element name="deleteDepartmentAdminBO" type="tns:deleteDepartmentAdminBO"/>
+
+<xs:element name="deleteDepartmentAdminBOResponse" type="tns:deleteDepartmentAdminBOResponse"/>
+
+<xs:element name="deleteEnterpriseAdmin" type="tns:deleteEnterpriseAdmin"/>
+
+<xs:element name="deleteEnterpriseAdminBO" type="tns:deleteEnterpriseAdminBO"/>
+
+<xs:element name="deleteEnterpriseAdminBOResponse" type="tns:deleteEnterpriseAdminBOResponse"/>
+
+<xs:element name="deleteEnterpriseAdminResponse" type="tns:deleteEnterpriseAdminResponse"/>
+
+<xs:element name="deleteEnterpriseDeptAdmin" type="tns:deleteEnterpriseDeptAdmin"/>
+
+<xs:element name="deleteEnterpriseDeptAdminResponse" type="tns:deleteEnterpriseDeptAdminResponse"/>
+
+<xs:element name="deleteEnterpriseGroupAdmin" type="tns:deleteEnterpriseGroupAdmin"/>
+
+<xs:element name="deleteEnterpriseGroupAdminBO" type="tns:deleteEnterpriseGroupAdminBO"/>
+
+<xs:element name="deleteEnterpriseGroupAdminBOResponse" type="tns:deleteEnterpriseGroupAdminBOResponse"/>
+
+<xs:element name="deleteEnterpriseGroupAdminResponse" type="tns:deleteEnterpriseGroupAdminResponse"/>
+
+<xs:element name="deleteEnterpriseGroupDeptAdmin" type="tns:deleteEnterpriseGroupDeptAdmin"/>
+
+<xs:element name="deleteEnterpriseGroupDeptAdminResponse" type="tns:deleteEnterpriseGroupDeptAdminResponse"/>
+
+<xs:element name="deleteGroupAdmin" type="tns:deleteGroupAdmin"/>
+
+<xs:element name="deleteGroupAdminResponse" type="tns:deleteGroupAdminResponse"/>
+
+<xs:element name="deleteUser" type="tns:deleteUser"/>
+
+<xs:element name="deleteUserBO" type="tns:deleteUserBO"/>
+
+<xs:element name="deleteUserBOResponse" type="tns:deleteUserBOResponse"/>
+
+<xs:element name="deleteUserResponse" type="tns:deleteUserResponse"/>
+
+<xs:element name="editDepartmentAdminBO" type="tns:editDepartmentAdminBO"/>
+
+<xs:element name="editDepartmentAdminBOResponse" type="tns:editDepartmentAdminBOResponse"/>
+
+<xs:element name="editEnterpriseAdmin" type="tns:editEnterpriseAdmin"/>
+
+<xs:element name="editEnterpriseAdminBO" type="tns:editEnterpriseAdminBO"/>
+
+<xs:element name="editEnterpriseAdminBOResponse" type="tns:editEnterpriseAdminBOResponse"/>
+
+<xs:element name="editEnterpriseAdminBOWithPassword" type="tns:editEnterpriseAdminBOWithPassword"/>
+
+<xs:element name="editEnterpriseAdminBOWithPasswordResponse" type="tns:editEnterpriseAdminBOWithPasswordResponse"/>
+
+<xs:element name="editEnterpriseAdminResponse" type="tns:editEnterpriseAdminResponse"/>
+
+<xs:element name="editEnterpriseDeptAdmin" type="tns:editEnterpriseDeptAdmin"/>
+
+<xs:element name="editEnterpriseDeptAdminResponse" type="tns:editEnterpriseDeptAdminResponse"/>
+
+<xs:element name="editEnterpriseGroupAdmin" type="tns:editEnterpriseGroupAdmin"/>
+
+<xs:element name="editEnterpriseGroupAdminBO" type="tns:editEnterpriseGroupAdminBO"/>
+
+<xs:element name="editEnterpriseGroupAdminBOResponse" type="tns:editEnterpriseGroupAdminBOResponse"/>
+
+<xs:element name="editEnterpriseGroupAdminBOWithPassword" type="tns:editEnterpriseGroupAdminBOWithPassword"/>
+
+<xs:element name="editEnterpriseGroupAdminBOWithPasswordResponse" type="tns:editEnterpriseGroupAdminBOWithPasswordResponse"/>
+
+<xs:element name="editEnterpriseGroupAdminResponse" type="tns:editEnterpriseGroupAdminResponse"/>
+
+<xs:element name="editEnterpriseGroupDeptAdmin" type="tns:editEnterpriseGroupDeptAdmin"/>
+
+<xs:element name="editEnterpriseGroupDeptAdminResponse" type="tns:editEnterpriseGroupDeptAdminResponse"/>
+
+<xs:element name="editGroupAdmin" type="tns:editGroupAdmin"/>
+
+<xs:element name="editGroupAdminResponse" type="tns:editGroupAdminResponse"/>
+
+<xs:element name="findEnterpriseAdmin" type="tns:findEnterpriseAdmin"/>
+
+<xs:element name="findEnterpriseAdminResponse" type="tns:findEnterpriseAdminResponse"/>
+
+<xs:element name="findGroupAdmin" type="tns:findGroupAdmin"/>
+
+<xs:element name="findGroupAdminResponse" type="tns:findGroupAdminResponse"/>
+
+<xs:element name="getAdminIdType" type="tns:getAdminIdType"/>
+
+<xs:element name="getAdminIdTypeBO" type="tns:getAdminIdTypeBO"/>
+
+<xs:element name="getAdminIdTypeBOResponse" type="tns:getAdminIdTypeBOResponse"/>
+
+<xs:element name="getAdminIdTypeResponse" type="tns:getAdminIdTypeResponse"/>
+
+<xs:element name="getAsNameForEnterprise" type="tns:getAsNameForEnterprise"/>
+
+<xs:element name="getAsNameForEnterpriseResponse" type="tns:getAsNameForEnterpriseResponse"/>
+
+<xs:element name="getAsNameForUser" type="tns:getAsNameForUser"/>
+
+<xs:element name="getAsNameForUserResponse" type="tns:getAsNameForUserResponse"/>
+
+<xs:element name="getClusterByEnterprise" type="tns:getClusterByEnterprise"/>
+
+<xs:element name="getClusterByEnterpriseResponse" type="tns:getClusterByEnterpriseResponse"/>
+
+<xs:element name="getDeptUsers" type="tns:getDeptUsers"/>
+
+<xs:element name="getDeptUsersBO" type="tns:getDeptUsersBO"/>
+
+<xs:element name="getDeptUsersBOResponse" type="tns:getDeptUsersBOResponse"/>
+
+<xs:element name="getDeptUsersResponse" type="tns:getDeptUsersResponse"/>
+
+<xs:element name="getEnterpriseAdminList" type="tns:getEnterpriseAdminList"/>
+
+<xs:element name="getEnterpriseAdminListBO" type="tns:getEnterpriseAdminListBO"/>
+
+<xs:element name="getEnterpriseAdminListBOResponse" type="tns:getEnterpriseAdminListBOResponse"/>
+
+<xs:element name="getEnterpriseAdminListResponse" type="tns:getEnterpriseAdminListResponse"/>
+
+<xs:element name="getEnterpriseChildren" type="tns:getEnterpriseChildren"/>
+
+<xs:element name="getEnterpriseChildrenBO" type="tns:getEnterpriseChildrenBO"/>
+
+<xs:element name="getEnterpriseChildrenBOResponse" type="tns:getEnterpriseChildrenBOResponse"/>
+
+<xs:element name="getEnterpriseChildrenResponse" type="tns:getEnterpriseChildrenResponse"/>
+
+<xs:element name="getEnterpriseHierarchy" type="tns:getEnterpriseHierarchy"/>
+
+<xs:element name="getEnterpriseHierarchyBO" type="tns:getEnterpriseHierarchyBO"/>
+
+<xs:element name="getEnterpriseHierarchyBOResponse" type="tns:getEnterpriseHierarchyBOResponse"/>
+
+<xs:element name="getEnterpriseHierarchyResponse" type="tns:getEnterpriseHierarchyResponse"/>
+
+<xs:element name="getGroupAdminList" type="tns:getGroupAdminList"/>
+
+<xs:element name="getGroupAdminListBO" type="tns:getGroupAdminListBO"/>
+
+<xs:element name="getGroupAdminListBOResponse" type="tns:getGroupAdminListBOResponse"/>
+
+<xs:element name="getGroupAdminListResponse" type="tns:getGroupAdminListResponse"/>
+
+<xs:element name="getGroupChildren" type="tns:getGroupChildren"/>
+
+<xs:element name="getGroupChildrenBO" type="tns:getGroupChildrenBO"/>
+
+<xs:element name="getGroupChildrenBOResponse" type="tns:getGroupChildrenBOResponse"/>
+
+<xs:element name="getGroupChildrenResponse" type="tns:getGroupChildrenResponse"/>
+
+<xs:element name="getPortalInfoForCluster" type="tns:getPortalInfoForCluster"/>
+
+<xs:element name="getPortalInfoForClusterResponse" type="tns:getPortalInfoForClusterResponse"/>
+
+<xs:element name="getPortalUrlForEnterprise" type="tns:getPortalUrlForEnterprise"/>
+
+<xs:element name="getPortalUrlForEnterpriseResponse" type="tns:getPortalUrlForEnterpriseResponse"/>
+
+<xs:element name="getUserNativePasswordInd" type="tns:getUserNativePasswordInd"/>
+
+<xs:element name="getUserNativePasswordIndResponse" type="tns:getUserNativePasswordIndResponse"/>
+
+<xs:element name="getUserNativePasswordInds" type="tns:getUserNativePasswordInds"/>
+
+<xs:element name="getUserNativePasswordIndsResponse" type="tns:getUserNativePasswordIndsResponse"/>
+
+<xs:complexType name="deleteEnterpriseAdmin">
+<xs:sequence>
+<xs:element name="cluster" type="xs:string" minOccurs="0"/>
+<xs:element name="enterpriseId" type="xs:string" minOccurs="0"/>
+<xs:element name="adminId" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteEnterpriseAdminResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getDeptUsers">
+<xs:sequence>
+<xs:element name="cluster" type="xs:string" minOccurs="0"/>
+<xs:element name="enterpriseId" type="xs:string" minOccurs="0"/>
+<xs:element name="groupId" type="xs:string" minOccurs="0"/>
+<xs:element name="deptId" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getDeptUsersResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="authenticateUser">
+<xs:sequence>
+<xs:element name="cluster" type="xs:string" minOccurs="0"/>
+<xs:element name="userId" type="xs:string" minOccurs="0"/>
+<xs:element name="password" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="authenticateUserResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getClusterByEnterprise">
+<xs:sequence>
+<xs:element name="enterpriseId" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getClusterByEnterpriseResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:nbCluster" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="nbCluster">
+<xs:complexContent>
+<xs:extension base="tns:nbResultBO">
+<xs:sequence>
+<xs:element name="cluster" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="nbResultBO" abstract="true">
+<xs:sequence>
+<xs:element name="errorcode" type="xs:int"/>
+<xs:element name="message" type="xs:string" minOccurs="0"/>
+<xs:element name="status" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteEnterpriseGroupAdmin">
+<xs:sequence>
+<xs:element name="cluster" type="xs:string" minOccurs="0"/>
+<xs:element name="enterpriseId" type="xs:string" minOccurs="0"/>
+<xs:element name="groupId" type="xs:string" minOccurs="0"/>
+<xs:element name="adminId" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteEnterpriseGroupAdminResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAdminIdTypeBO">
+<xs:sequence>
+<xs:element name="cluster" type="xs:string" minOccurs="0"/>
+<xs:element name="adminId" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAdminIdTypeBOResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:nbAdminType" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="nbAdminType">
+<xs:complexContent>
+<xs:extension base="tns:nbResultBO">
+<xs:sequence>
+<xs:element name="adminType" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="addEnterpriseGroupAdminBO">
+<xs:sequence>
+<xs:element name="cluster" type="xs:string" minOccurs="0"/>
+<xs:element name="enterpriseId" type="xs:string" minOccurs="0"/>
+<xs:element name="arg2" type="xs:string" minOccurs="0"/>
+<xs:element name="nameFirst" type="xs:string" minOccurs="0"/>
+<xs:element name="nameLast" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addEnterpriseGroupAdminBOResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:nbGroupAdmin" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="nbGroupAdmin">
+<xs:complexContent>
+<xs:extension base="tns:nbResultBO">
+<xs:sequence>
+<xs:element name="groupAdmin" type="tns:nbGroupAdminBO" minOccurs="0"/>
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="nbGroupAdminBO">
+<xs:sequence>
+<xs:element name="enterpriseId" type="xs:string" minOccurs="0"/>
+<xs:element name="firstName" type="xs:string" minOccurs="0"/>
+<xs:element name="groupId" type="xs:string" minOccurs="0"/>
+<xs:element name="lastName" type="xs:string" minOccurs="0"/>
+<xs:element name="password" type="xs:string" minOccurs="0"/>
+<xs:element name="userId" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="editEnterpriseDeptAdmin">
+<xs:sequence>
+<xs:element name="cluster" type="xs:string" minOccurs="0"/>
+<xs:element name="enterpriseId" type="xs:string" minOccurs="0"/>
+<xs:element name="deptId" type="xs:string" minOccurs="0"/>
+<xs:element name="adminId" type="xs:string" minOccurs="0"/>
+<xs:element name="nameFirst" type="xs:string" minOccurs="0"/>
+<xs:element name="nameLast" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="editEnterpriseDeptAdminResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addEnterpriseGroupAdminWithPassword">
+<xs:sequence>
+<xs:element name="cluster" type="xs:string" minOccurs="0"/>
+<xs:element name="enterpriseId" type="xs:string" minOccurs="0"/>
+<xs:element name="groupId" type="xs:string" minOccurs="0"/>
+<xs:element name="nameFirst" type="xs:string" minOccurs="0"/>
+<xs:element name="nameLast" type="xs:string" minOccurs="0"/>
+<xs:element name="password" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addEnterpriseGroupAdminWithPasswordResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findGroupAdmin">
+<xs:sequence>
+<xs:element name="cluster" type="xs:string" minOccurs="0"/>
+<xs:element name="groupAdminId" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findGroupAdminResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:groupAdminBO" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="groupAdminBO">
+<xs:sequence>
+<xs:element name="firstName" type="xs:string" minOccurs="0"/>
+<xs:element name="groupId" type="xs:string" minOccurs="0"/>
+<xs:element name="lastName" type="xs:string" minOccurs="0"/>
+<xs:element name="password" type="xs:string" minOccurs="0"/>
+<xs:element name="serviceProviderId" type="xs:string" minOccurs="0"/>
+<xs:element name="userId" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getEnterpriseHierarchyBO">
+<xs:sequence>
+<xs:element name="cluster" type="xs:string" minOccurs="0"/>
+<xs:element name="enterpriseId" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getEnterpriseHierarchyBOResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:nbEnterprise" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="nbEnterprise">
+<xs:complexContent>
+<xs:extension base="tns:nbResultBO">
+<xs:sequence>
+<xs:element name="enterprise" type="tns:nbEnterpriseBO" minOccurs="0"/>
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="nbEnterpriseBO">
+<xs:sequence>
+<xs:element name="children" type="tns:nbGroupBO" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="enterpriseId" type="xs:string" minOccurs="0"/>
+<xs:element name="enterpriseName" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="nbGroupBO">
+<xs:sequence>
+<xs:element name="children" type="tns:nbDepartmentBO" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="enterpriseId" type="xs:string" minOccurs="0"/>
+<xs:element name="extensionLength" type="xs:int"/>
+<xs:element name="groupId" type="xs:string" minOccurs="0"/>
+<xs:element name="groupName" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="nbDepartmentBO">
+<xs:sequence>
+<xs:element name="children" type="tns:nbUserBO" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="deptName" type="xs:string" minOccurs="0"/>
+<xs:element name="enterpriseId" type="xs:string" minOccurs="0"/>
+<xs:element name="groupId" type="xs:string" minOccurs="0"/>
+<xs:element name="isEnterpriseLevelDept" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="nbUserBO">
+<xs:sequence>
+<xs:element name="aniType" type="xs:string" minOccurs="0"/>
+<xs:element name="enterpriseId" type="xs:string" minOccurs="0"/>
+<xs:element name="extension" type="xs:string" minOccurs="0"/>
+<xs:element name="firstName" type="xs:string" minOccurs="0"/>
+<xs:element name="groupId" type="xs:string" minOccurs="0"/>
+<xs:element name="hasNativePassword" type="xs:boolean"/>
+<xs:element name="lastName" type="xs:string" minOccurs="0"/>
+<xs:element name="serviceAssignmentList" type="tns:ServiceAssignment" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="userId" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="ServiceAssignment">
+<xs:sequence>
+<xs:element name="serviceName" type="xs:string"/>
+<xs:element name="assigned" type="xs:boolean"/>
+<xs:element name="servicePack" type="xs:boolean"/>
+<xs:element name="description" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addEnterpriseAdminBOWithPass">
+<xs:sequence>
+<xs:element name="cluster" type="xs:string" minOccurs="0"/>
+<xs:element name="enterpriseId" type="xs:string" minOccurs="0"/>
+<xs:element name="nameFirst" type="xs:string" minOccurs="0"/>
+<xs:element name="nameLast" type="xs:string" minOccurs="0"/>
+<xs:element name="password" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addEnterpriseAdminBOWithPassResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:nbEnterpriseAdmin" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="nbEnterpriseAdmin">
+<xs:complexContent>
+<xs:extension base="tns:nbResultBO">
+<xs:sequence>
+<xs:element name="enterpriseAdmin" type="tns:nbEnterpriseAdminBO" minOccurs="0"/>
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="nbEnterpriseAdminBO">
+<xs:sequence>
+<xs:element name="enterpriseId" type="xs:string" minOccurs="0"/>
+<xs:element name="firstName" type="xs:string" minOccurs="0"/>
+<xs:element name="language" type="xs:string" minOccurs="0"/>
+<xs:element name="lastName" type="xs:string" minOccurs="0"/>
+<xs:element name="password" type="xs:string" minOccurs="0"/>
+<xs:element name="userId" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getEnterpriseChildren">
+<xs:sequence>
+<xs:element name="cluster" type="xs:string" minOccurs="0"/>
+<xs:element name="enterpriseId" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getEnterpriseChildrenResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="editEnterpriseGroupAdmin">
+<xs:sequence>
+<xs:element name="cluster" type="xs:string" minOccurs="0"/>
+<xs:element name="enterpriseId" type="xs:string" minOccurs="0"/>
+<xs:element name="groupId" type="xs:string" minOccurs="0"/>
+<xs:element name="adminId" type="xs:string" minOccurs="0"/>
+<xs:element name="nameFirst" type="xs:string" minOccurs="0"/>
+<xs:element name="nameLast" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="editEnterpriseGroupAdminResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="editGroupAdmin">
+<xs:sequence>
+<xs:element name="cluster" type="xs:string" minOccurs="0"/>
+<xs:element name="groupId" type="xs:string" minOccurs="0"/>
+<xs:element name="adminId" type="xs:string" minOccurs="0"/>
+<xs:element name="nameFirst" type="xs:string" minOccurs="0"/>
+<xs:element name="nameLast" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="editGroupAdminResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getGroupAdminList">
+<xs:sequence>
+<xs:element name="groupId" type="xs:string" minOccurs="0"/>
+<xs:element name="enterpriseId" type="xs:string" minOccurs="0"/>
+<xs:element name="cluster" type="xs:string" minOccurs="0"/>
+<xs:element name="withPassword" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getGroupAdminListResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:nbGroupAdminList" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="nbGroupAdminList">
+<xs:complexContent>
+<xs:extension base="tns:nbResultBO">
+<xs:sequence>
+<xs:element name="groupAdminList" type="tns:groupAdminBO" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="addEnterpriseAdminWithPassword">
+<xs:sequence>
+<xs:element name="cluster" type="xs:string" minOccurs="0"/>
+<xs:element name="enterpriseId" type="xs:string" minOccurs="0"/>
+<xs:element name="nameFirst" type="xs:string" minOccurs="0"/>
+<xs:element name="nameLast" type="xs:string" minOccurs="0"/>
+<xs:element name="password" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addEnterpriseAdminWithPasswordResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteGroupAdmin">
+<xs:sequence>
+<xs:element name="cluster" type="xs:string" minOccurs="0"/>
+<xs:element name="groupId" type="xs:string" minOccurs="0"/>
+<xs:element name="adminId" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteGroupAdminResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addEnterpriseDeptAdmin">
+<xs:sequence>
+<xs:element name="cluster" type="xs:string" minOccurs="0"/>
+<xs:element name="enterpriseId" type="xs:string" minOccurs="0"/>
+<xs:element name="deptId" type="xs:string" minOccurs="0"/>
+<xs:element name="nameFirst" type="xs:string" minOccurs="0"/>
+<xs:element name="nameLast" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addEnterpriseDeptAdminResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteEnterpriseAdminBO">
+<xs:sequence>
+<xs:element name="cluster" type="xs:string" minOccurs="0"/>
+<xs:element name="enterpriseId" type="xs:string" minOccurs="0"/>
+<xs:element name="adminId" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteEnterpriseAdminBOResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:nbEnterpriseAdmin" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteUserBO">
+<xs:sequence>
+<xs:element name="cluster" type="xs:string" minOccurs="0"/>
+<xs:element name="groupId" type="xs:string" minOccurs="0"/>
+<xs:element name="userId" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteUserBOResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:nbUser" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="nbUser">
+<xs:complexContent>
+<xs:extension base="tns:nbResultBO">
+<xs:sequence>
+<xs:element name="user" type="tns:nbUserBO" minOccurs="0"/>
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="getGroupChildren">
+<xs:sequence>
+<xs:element name="cluster" type="xs:string" minOccurs="0"/>
+<xs:element name="enterpriseId" type="xs:string" minOccurs="0"/>
+<xs:element name="groupId" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getGroupChildrenResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addEnterpriseGroup">
+<xs:sequence>
+<xs:element name="cluster" type="xs:string" minOccurs="0"/>
+<xs:element name="enterpriseId" type="xs:string" minOccurs="0"/>
+<xs:element name="groupId" type="xs:string" minOccurs="0"/>
+<xs:element name="groupName" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addEnterpriseGroupResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getEnterpriseHierarchy">
+<xs:sequence>
+<xs:element name="cluster" type="xs:string" minOccurs="0"/>
+<xs:element name="enterpriseId" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getEnterpriseHierarchyResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteUser">
+<xs:sequence>
+<xs:element name="cluster" type="xs:string" minOccurs="0"/>
+<xs:element name="groupId" type="xs:string" minOccurs="0"/>
+<xs:element name="userId" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteUserResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getGroupChildrenBO">
+<xs:sequence>
+<xs:element name="cluster" type="xs:string" minOccurs="0"/>
+<xs:element name="enterpriseId" type="xs:string" minOccurs="0"/>
+<xs:element name="groupId" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getGroupChildrenBOResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:nbGroup" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="nbGroup">
+<xs:complexContent>
+<xs:extension base="tns:nbResultBO">
+<xs:sequence>
+<xs:element name="group" type="tns:nbGroupBO" minOccurs="0"/>
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="getGroupAdminListBO">
+<xs:sequence>
+<xs:element name="bwSession" type="tns:bwSessionInfo" minOccurs="0"/>
+<xs:element name="enterpriseId" type="xs:string" minOccurs="0"/>
+<xs:element name="groupId" type="xs:string" minOccurs="0"/>
+<xs:element name="withPassword" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="bwSessionInfo">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getGroupAdminListBOResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:nbGroupAdminList" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="editEnterpriseGroupAdminBOWithPassword">
+<xs:sequence>
+<xs:element name="cluster" type="xs:string" minOccurs="0"/>
+<xs:element name="enterpriseId" type="xs:string" minOccurs="0"/>
+<xs:element name="groupId" type="xs:string" minOccurs="0"/>
+<xs:element name="adminId" type="xs:string" minOccurs="0"/>
+<xs:element name="nameFirst" type="xs:string" minOccurs="0"/>
+<xs:element name="nameLast" type="xs:string" minOccurs="0"/>
+<xs:element name="password" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="editEnterpriseGroupAdminBOWithPasswordResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:nbGroupAdmin" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findEnterpriseAdmin">
+<xs:sequence>
+<xs:element name="cluster" type="xs:string" minOccurs="0"/>
+<xs:element name="enterpriseAdminId" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findEnterpriseAdminResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:serviceProviderAdminBO" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="serviceProviderAdminBO">
+<xs:sequence>
+<xs:element name="firstName" type="xs:string" minOccurs="0"/>
+<xs:element name="language" type="xs:string" minOccurs="0"/>
+<xs:element name="lastName" type="xs:string" minOccurs="0"/>
+<xs:element name="password" type="xs:string" minOccurs="0"/>
+<xs:element name="serviceProviderId" type="xs:string" minOccurs="0"/>
+<xs:element name="userId" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="editEnterpriseAdmin">
+<xs:sequence>
+<xs:element name="cluster" type="xs:string" minOccurs="0"/>
+<xs:element name="enterpriseId" type="xs:string" minOccurs="0"/>
+<xs:element name="adminId" type="xs:string" minOccurs="0"/>
+<xs:element name="nameFirst" type="xs:string" minOccurs="0"/>
+<xs:element name="nameLast" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="editEnterpriseAdminResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addUserBO">
+<xs:sequence>
+<xs:element name="cluster" type="xs:string" minOccurs="0"/>
+<xs:element name="groupId" type="xs:string" minOccurs="0"/>
+<xs:element name="userId" type="xs:string" minOccurs="0"/>
+<xs:element name="nameFirst" type="xs:string" minOccurs="0"/>
+<xs:element name="nameLast" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addUserBOResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:nbUser" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getPortalInfoForCluster">
+<xs:sequence>
+<xs:element name="cluster" type="xs:string" minOccurs="0"/>
+<xs:element name="enterpriseId" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getPortalInfoForClusterResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:nbPortalInfo" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="nbPortalInfo">
+<xs:complexContent>
+<xs:extension base="tns:nbResultBO">
+<xs:sequence>
+<xs:element name="adminSuffix" type="xs:string" minOccurs="0"/>
+<xs:element name="defaultDomain" type="xs:string" minOccurs="0"/>
+<xs:element name="portalHost" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="getUserNativePasswordInd">
+<xs:sequence>
+<xs:element name="cluster" type="xs:string" minOccurs="0"/>
+<xs:element name="userId" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getUserNativePasswordIndResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="NorthboundException">
+<xs:sequence>
+<xs:element name="errorCode" type="xs:int"/>
+<xs:element name="message" type="xs:string" minOccurs="0"/>
+<xs:element name="object" type="xs:anyType" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="IOException">
+<xs:sequence>
+<xs:element name="message" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="JDOMException">
+<xs:sequence>
+<xs:element name="message" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="Exception">
+<xs:sequence>
+<xs:element name="message" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteEnterpriseDeptAdmin">
+<xs:sequence>
+<xs:element name="cluster" type="xs:string" minOccurs="0"/>
+<xs:element name="enterpriseId" type="xs:string" minOccurs="0"/>
+<xs:element name="deptId" type="xs:string" minOccurs="0"/>
+<xs:element name="adminId" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteEnterpriseDeptAdminResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addGroupAdmin">
+<xs:sequence>
+<xs:element name="cluster" type="xs:string" minOccurs="0"/>
+<xs:element name="groupId" type="xs:string" minOccurs="0"/>
+<xs:element name="nameFirst" type="xs:string" minOccurs="0"/>
+<xs:element name="nameLast" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addGroupAdminResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAdminIdType">
+<xs:sequence>
+<xs:element name="cluster" type="xs:string" minOccurs="0"/>
+<xs:element name="adminId" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAdminIdTypeResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addEnterpriseAdminBO">
+<xs:sequence>
+<xs:element name="cluster" type="xs:string" minOccurs="0"/>
+<xs:element name="enterpriseId" type="xs:string" minOccurs="0"/>
+<xs:element name="nameFirst" type="xs:string" minOccurs="0"/>
+<xs:element name="nameLast" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addEnterpriseAdminBOResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:nbEnterpriseAdmin" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="editDepartmentAdminBO">
+<xs:sequence>
+<xs:element name="cluster" type="xs:string" minOccurs="0"/>
+<xs:element name="enterpriseId" type="xs:string" minOccurs="0"/>
+<xs:element name="groupId" type="xs:string" minOccurs="0"/>
+<xs:element name="adminId" type="xs:string" minOccurs="0"/>
+<xs:element name="isEnterpriseLevelDept" type="xs:boolean"/>
+<xs:element name="nameFirst" type="xs:string" minOccurs="0"/>
+<xs:element name="nameLast" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="editDepartmentAdminBOResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:nbDepartmentAdmin" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="nbDepartmentAdmin">
+<xs:complexContent>
+<xs:extension base="tns:nbResultBO">
+<xs:sequence>
+<xs:element name="departmentAdmin" type="tns:nbDepartmentAdminBO" minOccurs="0"/>
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="nbDepartmentAdminBO">
+<xs:sequence>
+<xs:element name="deptId" type="xs:string" minOccurs="0"/>
+<xs:element name="enterpriseId" type="xs:string" minOccurs="0"/>
+<xs:element name="firstName" type="xs:string" minOccurs="0"/>
+<xs:element name="groupId" type="xs:string" minOccurs="0"/>
+<xs:element name="lastName" type="xs:string" minOccurs="0"/>
+<xs:element name="userId" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getPortalUrlForEnterprise">
+<xs:sequence>
+<xs:element name="cluster" type="xs:string" minOccurs="0"/>
+<xs:element name="provisionerId" type="xs:string" minOccurs="0"/>
+<xs:element name="password" type="xs:string" minOccurs="0"/>
+<xs:element name="type" type="xs:string" minOccurs="0"/>
+<xs:element name="value" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getPortalUrlForEnterpriseResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:nbPortalURL" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="nbPortalURL">
+<xs:complexContent>
+<xs:extension base="tns:nbResultBO">
+<xs:sequence>
+<xs:element name="portalURL" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="addEnterpriseGroupBO">
+<xs:sequence>
+<xs:element name="cluster" type="xs:string" minOccurs="0"/>
+<xs:element name="enterpriseId" type="xs:string" minOccurs="0"/>
+<xs:element name="groupId" type="xs:string" minOccurs="0"/>
+<xs:element name="groupName" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addEnterpriseGroupBOResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:nbGroup" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getDeptUsersBO">
+<xs:sequence>
+<xs:element name="cluster" type="xs:string" minOccurs="0"/>
+<xs:element name="enterpriseId" type="xs:string" minOccurs="0"/>
+<xs:element name="groupId" type="xs:string" minOccurs="0"/>
+<xs:element name="deptId" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getDeptUsersBOResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:nbDepartment" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="nbDepartment">
+<xs:complexContent>
+<xs:extension base="tns:nbResultBO">
+<xs:sequence>
+<xs:element name="department" type="tns:nbDepartmentBO" minOccurs="0"/>
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="addDepartmentAdminBO">
+<xs:sequence>
+<xs:element name="cluster" type="xs:string" minOccurs="0"/>
+<xs:element name="enterpriseId" type="xs:string" minOccurs="0"/>
+<xs:element name="arg2" type="xs:string" minOccurs="0"/>
+<xs:element name="arg3" type="xs:string" minOccurs="0"/>
+<xs:element name="isEnterpriseLevelDept" type="xs:boolean"/>
+<xs:element name="nameFirst" type="xs:string" minOccurs="0"/>
+<xs:element name="nameLast" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addDepartmentAdminBOResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:nbDepartmentAdmin" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="editEnterpriseAdminBOWithPassword">
+<xs:sequence>
+<xs:element name="cluster" type="xs:string" minOccurs="0"/>
+<xs:element name="enterpriseId" type="xs:string" minOccurs="0"/>
+<xs:element name="adminId" type="xs:string" minOccurs="0"/>
+<xs:element name="nameFirst" type="xs:string" minOccurs="0"/>
+<xs:element name="nameLast" type="xs:string" minOccurs="0"/>
+<xs:element name="password" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="editEnterpriseAdminBOWithPasswordResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:nbEnterpriseAdmin" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getUserNativePasswordInds">
+<xs:sequence>
+<xs:element name="cluster" type="xs:string" minOccurs="0"/>
+<xs:element name="userIds" type="tns:nbUserBO" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getUserNativePasswordIndsResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:nbUser" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getEnterpriseAdminList">
+<xs:sequence>
+<xs:element name="enterpriseId" type="xs:string" minOccurs="0"/>
+<xs:element name="cluster" type="xs:string" minOccurs="0"/>
+<xs:element name="withPassword" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getEnterpriseAdminListResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:nbEnterpriseAdminList" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="nbEnterpriseAdminList">
+<xs:complexContent>
+<xs:extension base="tns:nbResultBO">
+<xs:sequence>
+<xs:element name="serviceProviderAdminBOList" type="tns:serviceProviderAdminBO" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="addExtensionUser">
+<xs:sequence>
+<xs:element name="cluster" type="xs:string" minOccurs="0"/>
+<xs:element name="groupId" type="xs:string" minOccurs="0"/>
+<xs:element name="nameFirst" type="xs:string" minOccurs="0"/>
+<xs:element name="nameLast" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addExtensionUserResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addEnterpriseGroupAdminBOWithPassword">
+<xs:sequence>
+<xs:element name="cluster" type="xs:string" minOccurs="0"/>
+<xs:element name="enterpriseId" type="xs:string" minOccurs="0"/>
+<xs:element name="arg2" type="xs:string" minOccurs="0"/>
+<xs:element name="nameFirst" type="xs:string" minOccurs="0"/>
+<xs:element name="nameLast" type="xs:string" minOccurs="0"/>
+<xs:element name="password" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addEnterpriseGroupAdminBOWithPasswordResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:nbGroupAdmin" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getEnterpriseChildrenBO">
+<xs:sequence>
+<xs:element name="cluster" type="xs:string" minOccurs="0"/>
+<xs:element name="enterpriseId" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getEnterpriseChildrenBOResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:nbEnterprise" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAsNameForUser">
+<xs:sequence>
+<xs:element name="cluster" type="xs:string" minOccurs="0"/>
+<xs:element name="userId" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAsNameForUserResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:nbASName" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="nbASName">
+<xs:complexContent>
+<xs:extension base="tns:nbResultBO">
+<xs:sequence>
+<xs:element name="ASName" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="addGroupAdminBO">
+<xs:sequence>
+<xs:element name="arg0" type="tns:addGroupAdminRequest" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addGroupAdminRequest">
+<xs:complexContent>
+<xs:extension base="tns:ssfRequestDTO">
+<xs:sequence>
+<xs:element name="domain" type="xs:string" minOccurs="0"/>
+<xs:element name="firstName" type="xs:string" minOccurs="0"/>
+<xs:element name="groupId" type="xs:string" minOccurs="0"/>
+<xs:element name="language" type="xs:string" minOccurs="0"/>
+<xs:element name="lastName" type="xs:string" minOccurs="0"/>
+<xs:element name="password" type="xs:string" minOccurs="0"/>
+<xs:element name="serviceProviderId" type="xs:string" minOccurs="0"/>
+<xs:element name="userId" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="ssfRequestDTO" abstract="true">
+<xs:sequence>
+<xs:element name="targetAS" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addGroupAdminBOResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:nbGroupAdmin" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteDepartmentAdminBO">
+<xs:sequence>
+<xs:element name="cluster" type="xs:string" minOccurs="0"/>
+<xs:element name="enterpriseId" type="xs:string" minOccurs="0"/>
+<xs:element name="groupId" type="xs:string" minOccurs="0"/>
+<xs:element name="adminId" type="xs:string" minOccurs="0"/>
+<xs:element name="isEnterpriseLevelDept" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteDepartmentAdminBOResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:nbDepartmentAdmin" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="assignUserServices">
+<xs:sequence>
+<xs:element name="cluster" type="xs:string" minOccurs="0"/>
+<xs:element name="userId" type="xs:string" minOccurs="0"/>
+<xs:element name="billingAccntNum" type="xs:string" minOccurs="0"/>
+<xs:element name="features" type="tns:nbFeature" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="nbFeature">
+<xs:complexContent>
+<xs:extension base="tns:nbResultBO">
+<xs:sequence>
+<xs:element name="feature" type="tns:feature" minOccurs="0"/>
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="feature">
+<xs:sequence>
+<xs:element name="name" type="xs:string" minOccurs="0"/>
+<xs:element name="bUnlimited" type="xs:boolean"/>
+<xs:element name="iLimit" type="xs:int"/>
+<xs:element name="iAssigned" type="xs:int"/>
+<xs:element name="bServicePack" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="assignUserServicesResponse">
+<xs:sequence>
+<xs:element name="features" type="tns:nbFeature" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addEnterpriseAdmin">
+<xs:sequence>
+<xs:element name="cluster" type="xs:string" minOccurs="0"/>
+<xs:element name="enterpriseId" type="xs:string" minOccurs="0"/>
+<xs:element name="nameFirst" type="xs:string" minOccurs="0"/>
+<xs:element name="nameLast" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addEnterpriseAdminResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addExtensionUserBO">
+<xs:sequence>
+<xs:element name="cluster" type="xs:string" minOccurs="0"/>
+<xs:element name="groupId" type="xs:string" minOccurs="0"/>
+<xs:element name="nameFirst" type="xs:string" minOccurs="0"/>
+<xs:element name="nameLast" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addExtensionUserBOResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:nbUser" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteEnterpriseGroupAdminBO">
+<xs:sequence>
+<xs:element name="cluster" type="xs:string" minOccurs="0"/>
+<xs:element name="enterpriseId" type="xs:string" minOccurs="0"/>
+<xs:element name="groupId" type="xs:string" minOccurs="0"/>
+<xs:element name="adminId" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteEnterpriseGroupAdminBOResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:nbGroupAdmin" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="editEnterpriseGroupAdminBO">
+<xs:sequence>
+<xs:element name="cluster" type="xs:string" minOccurs="0"/>
+<xs:element name="enterpriseId" type="xs:string" minOccurs="0"/>
+<xs:element name="groupId" type="xs:string" minOccurs="0"/>
+<xs:element name="adminId" type="xs:string" minOccurs="0"/>
+<xs:element name="nameFirst" type="xs:string" minOccurs="0"/>
+<xs:element name="nameLast" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="editEnterpriseGroupAdminBOResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:nbGroupAdmin" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAsNameForEnterprise">
+<xs:sequence>
+<xs:element name="cluster" type="xs:string" minOccurs="0"/>
+<xs:element name="enterpriseId" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAsNameForEnterpriseResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:nbASName" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="editEnterpriseGroupDeptAdmin">
+<xs:sequence>
+<xs:element name="cluster" type="xs:string" minOccurs="0"/>
+<xs:element name="enterpriseId" type="xs:string" minOccurs="0"/>
+<xs:element name="groupId" type="xs:string" minOccurs="0"/>
+<xs:element name="deptId" type="xs:string" minOccurs="0"/>
+<xs:element name="adminId" type="xs:string" minOccurs="0"/>
+<xs:element name="nameFirst" type="xs:string" minOccurs="0"/>
+<xs:element name="nameLast" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="editEnterpriseGroupDeptAdminResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addUser">
+<xs:sequence>
+<xs:element name="cluster" type="xs:string" minOccurs="0"/>
+<xs:element name="groupId" type="xs:string" minOccurs="0"/>
+<xs:element name="userId" type="xs:string" minOccurs="0"/>
+<xs:element name="nameFirst" type="xs:string" minOccurs="0"/>
+<xs:element name="nameLast" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addUserResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addEnterpriseGroupDeptAdmin">
+<xs:sequence>
+<xs:element name="cluster" type="xs:string" minOccurs="0"/>
+<xs:element name="enterpriseId" type="xs:string" minOccurs="0"/>
+<xs:element name="groupId" type="xs:string" minOccurs="0"/>
+<xs:element name="deptId" type="xs:string" minOccurs="0"/>
+<xs:element name="nameFirst" type="xs:string" minOccurs="0"/>
+<xs:element name="nameLast" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addEnterpriseGroupDeptAdminResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getEnterpriseAdminListBO">
+<xs:sequence>
+<xs:element name="bwSession" type="tns:bwSessionInfo" minOccurs="0"/>
+<xs:element name="enterpriseId" type="xs:string" minOccurs="0"/>
+<xs:element name="withPassword" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getEnterpriseAdminListBOResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:nbEnterpriseAdminList" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteEnterpriseGroupDeptAdmin">
+<xs:sequence>
+<xs:element name="cluster" type="xs:string" minOccurs="0"/>
+<xs:element name="enterpriseId" type="xs:string" minOccurs="0"/>
+<xs:element name="groupId" type="xs:string" minOccurs="0"/>
+<xs:element name="deptId" type="xs:string" minOccurs="0"/>
+<xs:element name="adminId" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteEnterpriseGroupDeptAdminResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addEnterpriseGroupAdmin">
+<xs:sequence>
+<xs:element name="cluster" type="xs:string" minOccurs="0"/>
+<xs:element name="enterpriseId" type="xs:string" minOccurs="0"/>
+<xs:element name="groupId" type="xs:string" minOccurs="0"/>
+<xs:element name="nameFirst" type="xs:string" minOccurs="0"/>
+<xs:element name="nameLast" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addEnterpriseGroupAdminResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addGroup">
+<xs:sequence>
+<xs:element name="cluster" type="xs:string" minOccurs="0"/>
+<xs:element name="groupId" type="xs:string" minOccurs="0"/>
+<xs:element name="groupName" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addGroupResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="editEnterpriseAdminBO">
+<xs:sequence>
+<xs:element name="cluster" type="xs:string" minOccurs="0"/>
+<xs:element name="enterpriseId" type="xs:string" minOccurs="0"/>
+<xs:element name="adminId" type="xs:string" minOccurs="0"/>
+<xs:element name="nameFirst" type="xs:string" minOccurs="0"/>
+<xs:element name="nameLast" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="editEnterpriseAdminBOResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:nbEnterpriseAdmin" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>

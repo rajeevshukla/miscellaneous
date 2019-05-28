@@ -1,0 +1,151 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<wsdl:definitions
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+	xmlns:tns="http://ssf.paetec.com/HUEMiddleware"
+	xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+	xmlns:ns1="http://schemas.xmlsoap.org/soap/http"
+	name="GetGroupsByEnterpriseSoapService"
+	targetNamespace="http://ssf.paetec.com/HUEMiddleware">
+	<wsdl:types>
+		<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+			xmlns:tns="http://ssf.paetec.com/HUEMiddleware" xmlns:common="https://comadfjlasdf.f "
+			attributeFormDefault="unqualified" elementFormDefault="unqualified"
+			targetNamespace="http://ssf.paetec.com/HUEMiddleware">
+			<xs:element name="getGroupsByEnterprise"
+				type="tns:getGroupsByEnterprise" />
+			<xs:element name="getGroupsByEnterpriseResponse"
+				type="tns:getGroupsByEnterpriseResponse" />
+			<xs:element name="getGroupsInEnterpriseRequestDTO"
+				type="tns:getGroupsInEnterpriseRequestDTO" />
+			<xs:element name="getGroupsInEnterpriseResponseDTO"
+				type="tns:getGroupsInEnterpriseResponseDTO" />
+			<xs:complexType name="getGroupsByEnterprise">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="arg0"
+						type="tns:getGroupsInEnterpriseRequestDTO" />
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="getGroupsInEnterpriseRequestDTO">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="targetAS"
+						type="xs:string" />
+					<xs:element name="serviceProviderId" type="xs:string" />
+					<xs:element minOccurs="0" name="groupSearchMode"
+						type="tns:searchModesEnum" />
+					<xs:element minOccurs="0" name="groupSearchCriteria"
+						type="xs:string" />
+					<xs:element minOccurs="0" name="groupSearchOptionType"
+						type="xs:string" />
+					<xs:element minOccurs="0" name="fetchResultFromCache"
+						type="xs:boolean" />
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="getGroupsByEnterpriseResponse">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="return"
+						type="tns:getGroupsInEnterpriseResponseDTO" />
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType
+				name="getGroupsInEnterpriseResponseDTO">
+				<xs:sequence>
+					<xs:element maxOccurs="unbounded" minOccurs="0"
+						name="group" nillable="true" type="tns:groupDetailsDTO" />
+					<xs:element maxOccurs="unbounded" minOccurs="0"
+						name="errors" nillable="true" type="tns:errorDetailDTO" />
+					<xs:element minOccurs="0" name="overallStatus"
+						type="tns:overallStatusDTO" />
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="groupDetailsDTO">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="groupId"
+						type="xs:string" />
+					<xs:element minOccurs="0" name="groupName"
+						type="xs:string" />
+					<xs:element minOccurs="0" name="userLimit"
+						type="xs:string" />
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="errorDetailDTO">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="code" type="xs:string" />
+					<xs:element minOccurs="0" name="description"
+						type="xs:string" />
+					<xs:element minOccurs="0" name="detail" type="xs:string" />
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="overallStatusDTO">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="code" type="xs:string" />
+					<xs:element minOccurs="0" name="description"
+						type="xs:string" />
+				</xs:sequence>
+			</xs:complexType>
+			<xs:simpleType name="searchModesEnum">
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="STARTS_WITH" />
+					<xs:enumeration value="CONTAINS" />
+					<xs:enumeration value="EQUAL_TO" />
+				</xs:restriction>
+			</xs:simpleType>
+			<xs:element name="SSFException">
+				<xs:complexType>
+					<xs:sequence />
+				</xs:complexType>
+			</xs:element>
+		</xs:schema>
+	</wsdl:types>
+	<wsdl:message name="getGroupsByEnterpriseResponse">
+		<wsdl:part element="tns:getGroupsByEnterpriseResponse"
+			name="parameters">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="SSFException">
+		<wsdl:part element="tns:SSFException" name="SSFException">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="getGroupsByEnterprise">
+		<wsdl:part element="tns:getGroupsByEnterprise"
+			name="parameters">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:portType name="GetGroupsByEnterpriseSoapPortType">
+		<wsdl:operation name="getGroupsByEnterprise">
+			<wsdl:input message="tns:getGroupsByEnterprise"
+				name="getGroupsByEnterprise">
+			</wsdl:input>
+			<wsdl:output message="tns:getGroupsByEnterpriseResponse"
+				name="getGroupsByEnterpriseResponse">
+			</wsdl:output>
+			<wsdl:fault message="tns:SSFException" name="SSFException">
+			</wsdl:fault>
+		</wsdl:operation>
+	</wsdl:portType>
+	<wsdl:binding
+		name="GetGroupsByEnterpriseSoapServiceSoapBinding"
+		type="tns:GetGroupsByEnterpriseSoapPortType">
+		<soap:binding style="document"
+			transport="http://schemas.xmlsoap.org/soap/http" />
+		<wsdl:operation name="getGroupsByEnterprise">
+			<soap:operation soapAction="" style="document" />
+			<wsdl:input name="getGroupsByEnterprise">
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output name="getGroupsByEnterpriseResponse">
+				<soap:body use="literal" />
+			</wsdl:output>
+			<wsdl:fault name="SSFException">
+				<soap:fault name="SSFException" use="literal" />
+			</wsdl:fault>
+		</wsdl:operation>
+	</wsdl:binding>
+	<wsdl:service name="GetGroupsByEnterpriseSoapService">
+		<wsdl:port
+			binding="tns:GetGroupsByEnterpriseSoapServiceSoapBinding"
+			name="GetGroupsByEnterpriseSoapPortTypePort">
+			<soap:address location="" />
+		</wsdl:port>
+	</wsdl:service>
+</wsdl:definitions>

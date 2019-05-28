@@ -1,0 +1,177 @@
+<?xml version='1.0' encoding='UTF-8'?><wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://ssf.paetec.com/HUEMiddleware" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http" name="ModifyUsersSoapService" targetNamespace="http://ssf.paetec.com/HUEMiddleware">
+  <wsdl:types>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://ssf.paetec.com/HUEMiddleware" attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://ssf.paetec.com/HUEMiddleware">
+  <xs:element name="aniStatusDTO" type="tns:aniStatusDTO"/>
+  <xs:element name="aniStatusResponseDTO" type="tns:aniStatusResponseDTO"/>
+  <xs:element name="modifyUsers" type="tns:modifyUsers"/>
+  <xs:element name="modifyUsersRequestDTO" type="tns:modifyUsersRequestDTO"/>
+  <xs:element name="modifyUsersResponse" type="tns:modifyUsersResponse"/>
+  <xs:complexType name="modifyUsers">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="tns:modifyUsersRequestDTO"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modifyUsersRequestDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="targetAS" type="xs:string"/>
+      <xs:element name="serviceProviderId" type="xs:string"/>
+      <xs:element name="groupId" type="xs:string"/>
+      <xs:element minOccurs="0" name="jobId" type="xs:string"/>
+      <xs:element name="users">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element maxOccurs="unbounded" name="user" type="tns:userModifyDTO"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element minOccurs="0" name="defaultDomain" type="xs:string"/>
+      <xs:element minOccurs="0" name="preventTrunkGrpNameChange" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="userModifyDTO">
+    <xs:sequence>
+      <xs:element name="userId" type="xs:string"/>
+      <xs:element name="userModifyDetails" type="tns:userModifyDetailsDTO"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="userModifyDetailsDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="firstName" type="xs:string"/>
+      <xs:element minOccurs="0" name="lastName" type="xs:string"/>
+      <xs:element minOccurs="0" name="callingLineIdFirstName" type="xs:string"/>
+      <xs:element minOccurs="0" name="callingLineIdLastName" type="xs:string"/>
+      <xs:element minOccurs="0" name="nameDialingName" nillable="true" type="tns:nameDialingNameDTO"/>
+      <xs:element minOccurs="0" name="hiraganaLastName" type="xs:string"/>
+      <xs:element minOccurs="0" name="hiraganaFirstName" type="xs:string"/>
+      <xs:element minOccurs="0" name="phoneNumber" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="extension" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="callingLineIdPhoneNumber" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="language" type="xs:string"/>
+      <xs:element minOccurs="0" name="timeZone" type="xs:string"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="alias" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="deviceName" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="linePort" type="xs:string"/>
+      <xs:element minOccurs="0" name="deviceLevel" type="tns:accessDeviceLevelEnum"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="sipContactList" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="oldPassword" type="xs:string"/>
+      <xs:element minOccurs="0" name="newPassword" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="title" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="pagerPhoneNumber" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="mobilePhoneNumber" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="emailAddress" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="yahooId" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="addressLocation" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="alternateTrunkIdentity" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="enterpriseTrunkName" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="trunkGroupName" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="networkClassOfService" type="xs:string"/>
+      <xs:element minOccurs="0" name="officeZoneName" type="xs:string"/>
+      <xs:element minOccurs="0" name="primaryZoneName" type="xs:string"/>
+      <xs:element minOccurs="0" name="impId" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="impPassword" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="address" type="tns:modifyAddressDTO"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="nameDialingNameDTO">
+    <xs:sequence>
+      <xs:element name="nameDialingLastName" type="xs:string"/>
+      <xs:element name="nameDialingFirstName" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modifyAddressDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="addressLine1" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="addressLine2" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="city" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="stateOrProvince" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="stateOrProvinceDisplayName" type="xs:string"/>
+      <xs:element minOccurs="0" name="zipOrPostalCode" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="country" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modifyUsersResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:aniStatusResponseDTO"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="aniStatusResponseDTO">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="aniStatusList" nillable="true" type="tns:aniStatusDTO"/>
+      <xs:element minOccurs="0" name="overallStatus" type="tns:overallStatusDTO"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="aniStatusDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ani" type="xs:string"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="errors" nillable="true" type="tns:errorDetailDTO"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="errorDetailDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="code" type="xs:string"/>
+      <xs:element minOccurs="0" name="description" type="xs:string"/>
+      <xs:element minOccurs="0" name="detail" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="overallStatusDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="code" type="xs:string"/>
+      <xs:element minOccurs="0" name="description" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="accessDeviceLevelEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="SYSTEM"/>
+      <xs:enumeration value="SERVICE_PROVIDER"/>
+      <xs:enumeration value="GROUP"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="SSFException" type="tns:SSFException"/>
+  <xs:complexType name="SSFException">
+    <xs:sequence/>
+  </xs:complexType>
+</xs:schema>
+  </wsdl:types>
+  <wsdl:message name="modifyUsersResponse">
+    <wsdl:part element="tns:modifyUsersResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="modifyUsers">
+    <wsdl:part element="tns:modifyUsers" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="SSFException">
+    <wsdl:part element="tns:SSFException" name="SSFException">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="ModifyUsersSoapPortType">
+    <wsdl:operation name="modifyUsers">
+      <wsdl:input message="tns:modifyUsers" name="modifyUsers">
+    </wsdl:input>
+      <wsdl:output message="tns:modifyUsersResponse" name="modifyUsersResponse">
+    </wsdl:output>
+      <wsdl:fault message="tns:SSFException" name="SSFException">
+    </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ModifyUsersSoapServiceSoapBinding" type="tns:ModifyUsersSoapPortType">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="modifyUsers">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="modifyUsers">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="modifyUsersResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="SSFException">
+        <soap:fault name="SSFException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ModifyUsersSoapService">
+    <wsdl:port binding="tns:ModifyUsersSoapServiceSoapBinding" name="ModifyUsersSoapPortTypePort">
+      <soap:address location=""/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

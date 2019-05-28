@@ -2,22 +2,12 @@ package com.stream.model;
 
 public class Car {
 
-	private final Integer id;
-	private final String make;
-	private final String model;
-	private final String color;
-	private final Integer year;
-	private final Double price;
-
-	public Car(Integer id, String make, String model, String color, Integer year, Double price) {
-		super();
-		this.id = id;
-		this.make = make;
-		this.model = model;
-		this.color = color;
-		this.year = year;
-		this.price = price;
-	}
+	private  Integer id;
+	private  String make;
+	private  String model;
+	private  String color;
+	private  Integer year;
+	private   Double price;
 
 	public Integer getId() {
 		return id;

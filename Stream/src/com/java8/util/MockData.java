@@ -13,6 +13,7 @@ import com.google.common.io.Resources;
 import com.google.common.reflect.TypeToken;
 import com.google.gson.Gson;
 import com.stream.model.Car;
+import com.stream.model.Employee;
 import com.stream.model.Person;
 
 public class MockData {
@@ -45,6 +46,20 @@ public class MockData {
 		return ImmutableList.copyOf(carList);
 	}
 	
+	
+	public static ImmutableList<Employee> getEmployees() throws IOException { 
+		
+		    InputStream inputStream =  Resources.getResource("employees").openStream();
+		    
+		    String jsonData = IOUtils.toString(inputStream, "UTF-8");
+		    Type listType = new TypeToken<ArrayList<Employee>>() {
+				private static final long serialVersionUID = -6666490026343525445L;
+				
+			}.getType();
+			List<Employee> employees = new Gson().fromJson(jsonData, listType);
+			return ImmutableList.copyOf(employees);
+		     
+	}
 	
 	
 
