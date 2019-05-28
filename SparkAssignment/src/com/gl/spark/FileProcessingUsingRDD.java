@@ -11,7 +11,7 @@ import org.apache.spark.api.java.JavaSparkContext;
 import scala.Tuple2;
 
 
-public class FileProcessingUserRDD {
+public class FileProcessingUsingRDD {
 
 
 
