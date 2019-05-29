@@ -13,8 +13,7 @@ public class HiveOperations {
 
 		setupHiveDb(sparkSession);
 		Dataset<Row> dataSet= sparkSession.read().csv("src/com/gl/spark/input.csv");
-		dataSet.show();
-
+		
 //		dataSet.createOrReplaceTempView("mobile_call_usages");
 
 //		Dataset<Row> rows= 	sparkSession.sql("select _c0 as id ,_c2 as date, sum(_c1) as sum,sum(_c1)/count(_c1) as average  from mobile_call_usages group by id,date order by id,date");

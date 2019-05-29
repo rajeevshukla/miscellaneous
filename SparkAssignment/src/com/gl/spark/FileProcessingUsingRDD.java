@@ -47,6 +47,8 @@ public class FileProcessingUsingRDD {
 		//2.finding max 
 		JavaPairRDD<Tuple2<String, String>, Integer> maxRdd = pairedWithIdDate.reduceByKey((v1,v2)->v1 >v2 ? v1 :v2);
 		maxRdd.foreach(t->System.out.println(t._1+" :"+t._2));
+		
+
 
 		//3.finding min 
 		JavaPairRDD<Tuple2<String, String>, Integer> minRdd = pairedWithIdDate.reduceByKey((v1,v2)->v1<v2 ? v1 :v2);
