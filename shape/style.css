@@ -1,0 +1,151 @@
+div.shape {
+    height: 100px;
+    background: #CCD3EA;
+    color: #fff;
+    position: relative;
+    width: 400px;
+    text-align: center;
+    line-height: 40px;
+    margin-top: 2px;
+}
+
+div.shape:after {
+    content: "";
+    position: absolute;
+    height: 0;
+    width: 0;
+    left: 100%;
+    top: -10px;
+    border: 61px solid transparent;
+    border-left: 84px solid #CCD3EA;
+    border-radius: 5px;
+}
+
+.level1 {
+    height: 90px;
+    width: 100px;
+    
+    color: black;
+    float: left;
+}
+
+.level {
+    border-radius: 5px;
+    background-color: #4372C3;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+
+.smallbox:hover {
+    margin-top: 2px;
+    height: 30px;
+    width: 40px;
+    margin-left: 5px;;
+    color: black;
+    float: left;
+    background-color: #1414f1;
+    border-radius: 5px;;
+}
+
+.oval:hover {
+    background: red;
+    width: 20px;
+    height: 10px;
+    border-radius: 20px / 10px;
+    margin:2px 5px 2px 2px;
+    float: left;
+}
+
+.level2 {
+    height: 90px;
+    width: 160px;
+    margin-left: 20px;
+   
+    color: black;
+    float: left;
+}
+
+.level3 {
+    height: 90px;
+    width: 100px;
+    
+    color: black;
+    float: left;
+}
+
+.smallbox {
+    margin-top: 2px;
+    height: 30px;
+    width: 40px;
+    margin-left: 5px;;
+    color: black;
+    float: left;
+    border-radius: 5px;;
+}
+
+.sublevel1 {
+    background-color: #A8D08C;
+}
+
+.sublevel2 {
+    background-color: #ED7D31;
+}
+
+.oval {
+    width: 20px;
+    height: 10px;
+    background: #ED7D31;
+    border-radius: 20px / 10px;
+    margin:2px 5px 2px 2px;
+    float: left;
+  }
+
+  .prec{
+    top: 30px;
+    position: relative;
+    font-size: 15px;;
+}
+
+.circle{
+    position: relative;
+    top: 5px;
+    left: 5px;
+    text-align: center;
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    background-color: #E6F4F7;
+}
+
+.circle:hover{
+    position: relative;
+    top: 5px;
+    left: 5px;
+    text-align: center;
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    background-color: #ffdde6;
+}
+
+.active-border{
+    position: relative;
+    text-align: center;
+    width: 110px;
+    height: 110px;
+    border-radius: 100%;
+
+    background-color:#ED7D31;
+    background-image:
+        linear-gradient(162deg, transparent 50%,#4372C3 50%),
+        linear-gradient(90deg, #4372C3 50%, transparent 50%);
+    
+}
+
+.parent {
+    width: 650px;
+    border-radius: 10px;
+    height: 160px;
+    border: solid;
+    margin-bottom: 10px;
+}
