@@ -20,7 +20,7 @@
             <div style="margin-left: 40px; margin-top: 10px;">
               Loan Lease Lifetime
               <div>
-                <div id="activeBorder" class="active-border" style="float: left;">
+                <div id="activeBorder" class="active-border" data-toggle="modal" data-target="#exampleModalCenter" style="float: left;">
                   <div id="circle" class="circle">
                       <span class="prec 270" id="prec">75%</br> Accuracy</span>
                   </div>
@@ -66,7 +66,7 @@
               <div style="margin-left: 40px; margin-top: 10px;">
                MAC FF MNT
                 <div>
-                  <div id="activeBorder" class="active-border" style="float: left;">
+                  <div id="activeBorder" class="active-border" data-toggle="modal" data-target="#exampleModalCenter" style="float: left;">
                     <div id="circle" class="circle">
                         <span class="prec 270" id="prec">75%</br> Accuracy</span>
                     </div>
@@ -106,8 +106,26 @@
     </div>
 
 
-
-  
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Accuracy Details</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
 
   
 
